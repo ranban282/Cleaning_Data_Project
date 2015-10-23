@@ -102,8 +102,9 @@ names(combinedSubjects) <- c("Subject")
 tidyDataSet <- cbind.data.frame(combinedSubjects,combinedActivity,combinedObs)
 
 summarizedTidyDataSet  <- aggregate(select(tidyDataSet,-Subject,-Activity),by=list(tidyDataSet$Subject,tidyDataSet$Activity),FUN=mean)
-
 names(summarizedTidyDataSet) [1:2] <- c("Subject","Activity")
+summarizedTidyDataSet  <- arrange(summarizedTidyDataSet,Subject,Activity)
+
 write.table(row.names=FALSE,file="result.txt",summarizedTidyDataSet)
 
 
