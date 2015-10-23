@@ -6,11 +6,11 @@
 4. Combine the output of steps 2 and 3
 5. Obtain the variable names correponding to the indices obtained in step 4
 6. Rename the variable names, to a more human-readable format. This includes
-*  We substitute () with " of ". E.g. tBodyAcc-mean()-Z becomes tBodyAcc-mean of -Z
-*  We move mean and std to the front. Thus "tBodyAcc-mean of -Z" becomes "mean of tBodyAccZ". This works even when  the axis is not present. Eg "BodyAccMag-mean of" will become "mean of BodyAccMag"  
-*  If X,Y or Z are present, replace it with ", X-Axis", etc. Thus, "mean of tBodyAccZ" becomes "mean of tBodyAcc, Z-Axis"
-* Capitalize mean to Mean
-* Change  std to Std.dev
+  1. We substitute () with " of ". E.g. tBodyAcc-mean()-Z becomes tBodyAcc-mean of -Z
+  2. We move mean and std to the front. Thus "tBodyAcc-mean of -Z" becomes "mean of tBodyAccZ". This works even when  the axis is not present. Eg "BodyAccMag-mean of" will become "mean of BodyAccMag"  
+  3. If X,Y or Z are present, replace it with ", X-Axis", etc. Thus, "mean of tBodyAccZ" becomes "mean of tBodyAcc, Z-Axis"
+  4.  Capitalize mean to Mean
+  5. Change  std to Std.dev
 7. Read train observations from UCI HAR Dataset/train/X_train.txt
 8. Read test observations from UCI HAR Dataset/test/X_test.txt
 9. Extract only the fields we want, i.e. the ones with mean and std in them, using the indices obtained in step 4, from the train observations, obtained in step 7.
