@@ -9,7 +9,7 @@ renameVars<- function(variableNames)
 	 #convert to character vector first
         charVarNames <- as.character(variableNames)
         #First we replace mean() with "mean of ", and std() with "std of "
-        temp1 <- gsub("\\(\\)"," of ",cv)
+        temp1 <- gsub("\\(\\)"," of ",charVarNames)
         # Move mean/std to front
         parts <- strsplit(temp1,"-")
         temp2 <- sapply(parts,function(x){last <- if(length(x)==3){x[3]}else{""};paste(x[2],x[1],last,sep="")})
@@ -106,6 +106,8 @@ names(summarizedTidyDataSet) [1:2] <- c("Subject","Activity")
 summarizedTidyDataSet  <- arrange(summarizedTidyDataSet,Subject,Activity)
 
 write.table(row.names=FALSE,file="result.txt",summarizedTidyDataSet)
+
+write.table(x=names(summarizedTidyDataSet),"Variables.md",col.names=FALSE)
 
 
 	

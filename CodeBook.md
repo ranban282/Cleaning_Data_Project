@@ -29,4 +29,5 @@
 22. Combine the three data (i.e the ones obtained in steps 12, 18 and 21) sets column-wise, using cbind.data.frame
 23. Summarize the data set on Subject and activity.
 24. Rename the first two variables to Subject and Activity, respectively, as they have become "un-renamed"
-25. Sort by Subject and Activity. We finally have the tidy data set as asked for in the question. You can read the result.txt file using excel/libreoffice calc; when importing, use space as the seperator. 
+25. Sort by Subject and Activity. We finally have the tidy data set as asked for in the question. You can read the result.txt file using excel/libreoffice calc; when importing, use space as the seperator.
+26. Look at variables.md for a list of variables in the final data set.
