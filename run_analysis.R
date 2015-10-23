@@ -107,7 +107,7 @@ summarizedTidyDataSet  <- arrange(summarizedTidyDataSet,Subject,Activity)
 
 write.table(row.names=FALSE,file="result.txt",summarizedTidyDataSet)
 
-write.table(x=names(summarizedTidyDataSet),"Variables.md",col.names=FALSE)
+write.table(x=names(summarizedTidyDataSet),"variables.txt",col.names=FALSE)
 
 
 	
